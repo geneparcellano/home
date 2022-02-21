@@ -1,0 +1,206 @@
+body {
+	background-color: #292B2F;
+	max-width: 1200px;
+	padding: 50px;
+	margin: auto;
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	line-height: 26px;
+	color: #888;
+}
+h1, h2, h3 {
+	font-family: 'Roboto Slab', serif;
+	color: #fff;
+}
+h1, .h1 {
+	margin-bottom: 10px;
+	font-size: 36px;
+	line-height: 47px;
+}
+h2, h3 {
+	margin-bottom: 5px;
+}
+h2 {
+	font-size: 22px;
+	line-height: 26px;
+}
+h3 {
+	font-size: inherit;
+	line-height: inherit;
+}
+a:link {
+	color: #fff;
+	/*color: #E3A441;*/
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+a:visited {
+	/*color: #5684FA;*/
+	color: #fff;
+}
+p {
+	max-width: 720px;
+	margin: 0 0 20px;
+}
+ul {
+	list-style: none;
+	padding-left: 0;
+}
+
+/***************************************************
+Social
+***************************************************/
+.social li {
+	display: inline-block;
+	padding-right: 30px;
+	margin-bottom: 10px;
+}
+.social-icon {
+	margin-right: 6px;
+}
+.new-window-icon {
+	margin-left: 6px;
+}
+header, section {
+	margin-bottom: 100px;
+}
+
+/***************************************************
+Works
+***************************************************/
+.works {
+	/*display: flex;*/
+	margin: 0 -20px;
+}
+.works li {
+	display: inline-block;
+}
+.works li a {
+	display: block;
+	padding: 20px;
+	margin-right: 50px;
+	border-radius: 10px;
+	transition: background-color 0.2s ease-out;
+}
+.works li a:hover {
+	display: block;
+	background-color: rgba(255, 255, 255,5%);
+	text-decoration: none;
+}
+.works li h3 {
+	margin-bottom: 0;
+	font-family: 'Roboto', sans-serif;
+}
+.works li a p {
+	margin-bottom: 0;
+	color: #888;
+}
+.work-thumb {
+	height: 200px;
+	width: 300px;
+	margin-bottom: 10px;
+	background-color: #eee;
+	box-shadow: 0 0 5px #191919;
+}
+
+/***************************************************
+Apps
+***************************************************/
+.apps li {
+	display: inline-block;
+	padding-right: 30px;
+	margin-bottom: 10px;
+}
+.apps li span {
+	display: inline-block;
+}
+.app-icon {
+	margin-right: 6px;
+	vertical-align: middle;
+}
+
+/***************************************************
+Modal
+***************************************************/
+body.show-modal {
+	overflow: hidden;
+}
+.modal {
+	display: none;
+}
+.modal.is-visible {
+	display: block;
+}
+.modal-curtain {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: #000;
+	opacity: 50%;
+}
+.modal-content {
+	position: fixed;
+	top: 20px;
+	left: 20px;
+	right: 20px;
+	bottom: 20px;
+	background-color: #292B2F;
+	box-shadow: 0 0 5px #000;
+	overflow: hidden;
+}
+.modal-head {
+	padding: 15px 20px 10px;
+	box-shadow: 0 0 5px #191919;
+}
+.modal-body {
+	overflow-y: auto;
+	height: 100%;
+	padding: 30px 0;
+}
+.modal-head button {
+	background-color: transparent;
+	padding: 0;
+	border: 0;
+	cursor: pointer;
+	opacity: 50%;
+	transition: opacity 0.2s linear;
+}
+.modal-head button:hover {
+	opacity: 80%;
+}
+.modal-head button:active {
+	opacity: 100%;
+}
+.modal-close {
+	float: right;
+}
+
+/***************************************************
+Work
+***************************************************/
+.work {
+	display: none;
+	max-width: 1024px;
+	margin: 0 auto;
+	padding: 0 50px 250px;
+}
+.work-image {
+	display: block;
+	margin: 50px 0 100px;
+	text-align: center;
+}
+.work-image img {
+	width: 100%;
+	height: auto;
+	box-shadow: 0 0 5px #191919;
+}
+.work-image img.no-shadow {
+	box-shadow: none;
+}
+.work.is-visible {
+	display: block;
+}
