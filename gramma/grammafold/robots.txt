@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://geneparcellano.com/gramma/grammafold/sitemap.xml
