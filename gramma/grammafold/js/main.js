@@ -1,7 +1,8 @@
 (function () {
   'use strict';
 
-  // Smooth scroll for in-page anchor links
+  var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
   document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
     anchor.addEventListener('click', function (event) {
       var targetId = this.getAttribute('href');
@@ -11,13 +12,15 @@
       if (!target) return;
 
       event.preventDefault();
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      target.scrollIntoView({
+        behavior: prefersReducedMotion ? 'auto' : 'smooth',
+        block: 'start'
+      });
       target.setAttribute('tabindex', '-1');
       target.focus({ preventScroll: true });
     });
   });
 
-  // FAQ accordion via native <details> enhancement
   document.querySelectorAll('.faq-item').forEach(function (item) {
     var summary = item.querySelector('.faq-question');
     if (!summary) return;
