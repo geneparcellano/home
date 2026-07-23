@@ -332,31 +332,15 @@ summary:focus-visible {
 }
 
 .hero__callout {
-  max-width: 560px;
-  margin: 48px auto 0;
-  padding: 36px 32px;
-  border: 2px dashed color-mix(in srgb, var(--color-text-secondary) 35%, transparent);
+  max-width: 720px;
+  margin: 40px auto 0;
+}
+
+.hero__screenshot {
+  width: 100%;
   border-radius: var(--dropzone-radius);
-  background: transparent;
-  transition: border-color var(--transition), background var(--transition);
-}
-
-.hero__callout:hover {
-  border-color: var(--brand-fold);
-  background: var(--color-accent-tint);
-}
-
-.hero__callout-icon {
-  width: 40px;
-  height: 40px;
-  margin: 0 auto 12px;
-  color: var(--brand-fold);
-}
-
-.hero__callout p {
-  margin: 0;
-  font-size: 14px;
-  color: var(--color-text-secondary);
+  border: 1px solid var(--color-border);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
 }
 
 /* Sections */
@@ -598,6 +582,94 @@ summary:focus-visible {
   background: var(--color-panel-bg);
   border-radius: 4px;
   color: var(--color-text-secondary);
+}
+
+/* Screenshots */
+
+.screenshot {
+  display: block;
+  width: 100%;
+  border-radius: var(--panel-radius);
+  border: 1px solid var(--color-border);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+}
+
+.screenshot-caption {
+  margin: 10px 0 0;
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+
+.workflow-screenshots {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.workflow-shot {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 24px;
+  align-items: center;
+}
+
+.workflow-shot--reverse {
+  grid-template-columns: 1.4fr 1fr;
+}
+
+.workflow-shot--reverse .workflow-shot__text {
+  order: 2;
+}
+
+.workflow-shot--reverse .workflow-shot__media {
+  order: 1;
+}
+
+.workflow-shot__step {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--brand-fold);
+  margin: 0 0 8px;
+}
+
+.workflow-shot__title {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 0 8px;
+  letter-spacing: -0.02em;
+}
+
+.workflow-shot__text p {
+  margin: 0;
+  font-size: 15px;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+
+.before-after__shot {
+  margin-top: 12px;
+}
+
+.before-after__shot .screenshot {
+  border-radius: var(--panel-radius);
+}
+
+.workflow-screenshots--spaced {
+  margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+  .workflow-shot,
+  .workflow-shot--reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .workflow-shot--reverse .workflow-shot__text,
+  .workflow-shot--reverse .workflow-shot__media {
+    order: unset;
+  }
 }
 
 /* Mockup */
