@@ -24,7 +24,6 @@ https://geneparcellano.com/gramma/grammafold/
 
 - `assets/icon.png` — 256×256 app icon; replace with `icon_512x512.png` for higher-resolution social previews if desired
 - Mac App Store link — update when the app is live
-- Screenshot placeholder on the home page
 
 ## Local preview
 
