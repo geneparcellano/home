@@ -73,13 +73,9 @@
         <a class="btn btn--secondary" href="#how-it-works">How it works</a>
       </div>
 
-      <div class="hero__callout" aria-hidden="true">
-        <svg class="hero__callout-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg">
-          <path d="M8 14h10l3 4h15v16a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V16a2 2 0 0 1 2-2z"/>
-          <path d="M28 10v6M25 13h6"/>
-        </svg>
-        <p>Drop a folder here in the app, or choose one with <kbd>⌘O</kbd></p>
-      </div>
+      <figure class="hero__callout">
+        <img class="hero__screenshot" src="assets/screenshots/01-drop-folder.png" width="900" height="563" alt="Grammafold drop zone — drag a folder or choose one with Choose Folder">
+      </figure>
     </section>
 
     <section id="how-it-works" class="section" aria-labelledby="how-title">
@@ -87,28 +83,51 @@
         <h2 id="how-title" class="section__title">How it works</h2>
         <p class="section__lead">Four steps from scattered files to a tidy archive — with a full preview before anything moves.</p>
 
-        <ol class="steps">
-          <li class="step panel">
-            <span class="step__number" aria-hidden="true">1.</span>
-            <h3 class="step__title">Drop a folder</h3>
-            <p class="step__text">Drag a folder into Grammafold or use Choose Folder&hellip; (<kbd>⌘O</kbd>). The app scans recursively with no depth limit.</p>
-          </li>
-          <li class="step panel">
-            <span class="step__number" aria-hidden="true">2.</span>
-            <h3 class="step__title">Scan and preview</h3>
-            <p class="step__text">Grammafold reads EXIF and video metadata to determine dates, then shows a preview of every planned move.</p>
-          </li>
-          <li class="step panel">
-            <span class="step__number" aria-hidden="true">3.</span>
-            <h3 class="step__title">Organize in place</h3>
-            <p class="step__text">Confirm to move files into date subfolders inside your selected folder. Default format: <code>MM-DD-YYYY</code>.</p>
-          </li>
-          <li class="step panel">
-            <span class="step__number" aria-hidden="true">4.</span>
-            <h3 class="step__title">Undo anytime</h3>
-            <p class="step__text">Changed your mind? Undo the organization to restore your previous layout.</p>
-          </li>
-        </ol>
+        <div class="workflow-screenshots">
+          <article class="workflow-shot">
+            <div class="workflow-shot__text">
+              <p class="workflow-shot__step">Step 1</p>
+              <h3 class="workflow-shot__title">Drop a folder</h3>
+              <p>Drag a folder into Grammafold or use Choose Folder&hellip; (<kbd>⌘O</kbd>). The app scans recursively with no depth limit.</p>
+            </div>
+            <div class="workflow-shot__media">
+              <img class="screenshot" src="assets/screenshots/01-drop-folder.png" width="900" height="563" alt="Grammafold welcome screen with drop zone and Choose Folder button">
+            </div>
+          </article>
+
+          <article class="workflow-shot workflow-shot--reverse">
+            <div class="workflow-shot__text">
+              <p class="workflow-shot__step">Step 2</p>
+              <h3 class="workflow-shot__title">Scan your archive</h3>
+              <p>Grammafold reads EXIF and video metadata from every supported file. Progress is shown as thousands of files are indexed.</p>
+            </div>
+            <div class="workflow-shot__media">
+              <img class="screenshot" src="assets/screenshots/02-scanning.png" width="900" height="563" alt="Grammafold scanning 11,782 files with progress bar">
+            </div>
+          </article>
+
+          <article class="workflow-shot">
+            <div class="workflow-shot__text">
+              <p class="workflow-shot__step">Step 3</p>
+              <h3 class="workflow-shot__title">Preview every move</h3>
+              <p>Review the full organization plan before confirming — including year folders, date subfolders, fallback dates, and collisions. Choose your preferred date format.</p>
+            </div>
+            <div class="workflow-shot__media">
+              <img class="screenshot" src="assets/screenshots/03-preview.png" width="900" height="563" alt="Grammafold preview showing files organized by year with 11,782 files ready to organize">
+            </div>
+          </article>
+
+          <article class="workflow-shot workflow-shot--reverse">
+            <div class="workflow-shot__text">
+              <p class="workflow-shot__step">Step 4</p>
+              <h3 class="workflow-shot__title">Organize and undo</h3>
+              <p>Confirm to move files into date subfolders inside your selected folder. Changed your mind? Undo restores everything to its original layout.</p>
+            </div>
+            <div class="workflow-shot__media">
+              <img class="screenshot" src="assets/screenshots/05-organized.png" width="900" height="563" alt="Grammafold success screen showing 11,782 files moved into date folders with Undo option">
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -120,38 +139,41 @@
         <div class="before-after">
           <article class="panel panel--lg" aria-labelledby="before-label">
             <span id="before-label" class="panel__label panel__label--before">Before</span>
-            <ul class="panel__list">
-              <li>Random folders</li>
-              <li>Camera imports</li>
-              <li>Duplicate-looking files</li>
-              <li>Scattered memories</li>
-            </ul>
+            <p class="step__text">Thousands of photos scattered in one folder — hard to browse and impossible to find by date.</p>
+            <figure class="before-after__shot">
+              <img class="screenshot" src="assets/screenshots/07-finder-before.png" width="900" height="563" alt="Finder window showing thousands of unsorted JPEG files in a single folder">
+            </figure>
           </article>
 
           <article class="panel panel--lg" aria-labelledby="after-label">
             <span id="after-label" class="panel__label panel__label--after">After</span>
-            <pre class="folder-tree" aria-label="Example organized folder structure"><code><span class="folder">2024/</span>
-  <span class="date">03-15-2024/</span>
-  <span class="date">07-04-2024/</span>
-<span class="folder">2026/</span>
-  <span class="date">01-01-2026/</span>
-  <span class="date">01-02-2026/</span></code></pre>
-            <p class="step__text" style="margin-top: 12px;">When files span multiple years, folders become <code>YYYY/MM-DD-YYYY/</code>. Date format is configurable in the app.</p>
+            <p class="step__text">A clear year and date folder structure in Finder. When files span multiple years, folders become <code>YYYY/MM-DD-YYYY/</code>.</p>
+            <figure class="before-after__shot">
+              <img class="screenshot" src="assets/screenshots/08-finder-after.png" width="900" height="563" alt="Finder window showing photos organized into year folders and date subfolders">
+            </figure>
           </article>
         </div>
 
-        <div class="mockup" role="img" aria-label="App interface mockup placeholder">
-          <div class="mockup__toolbar" aria-hidden="true">
-            <span class="mockup__dot"></span>
-            <span class="mockup__dot"></span>
-            <span class="mockup__dot"></span>
-          </div>
-          <div class="mockup__body">
-            <div class="mockup__summary">
-              <strong>1,247</strong> files ready to organize &middot; <strong>12</strong> fallback dates &middot; <strong>3</strong> collisions resolved
+        <div class="workflow-screenshots workflow-screenshots--spaced">
+          <article class="workflow-shot">
+            <div class="workflow-shot__text">
+              <h3 class="workflow-shot__title">Choose your date format</h3>
+              <p>Pick from multiple date folder formats before organizing. Default is <code>MM-DD-YYYY</code>.</p>
             </div>
-            <div class="mockup__placeholder">Screenshot placeholder</div>
-          </div>
+            <div class="workflow-shot__media">
+              <img class="screenshot" src="assets/screenshots/04-date-format.png" width="900" height="563" alt="Grammafold date format picker showing MM-DD-YY and other format options">
+            </div>
+          </article>
+
+          <article class="workflow-shot workflow-shot--reverse">
+            <div class="workflow-shot__text">
+              <h3 class="workflow-shot__title">Undo restores everything</h3>
+              <p>Not happy with the result? Undo moves all files back to their original locations.</p>
+            </div>
+            <div class="workflow-shot__media">
+              <img class="screenshot" src="assets/screenshots/06-undo.png" width="900" height="563" alt="Grammafold undo screen showing 11,782 files restored to original locations">
+            </div>
+          </article>
         </div>
       </div>
     </section>
