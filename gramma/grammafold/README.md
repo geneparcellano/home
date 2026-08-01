@@ -1,6 +1,6 @@
 # Grammafold marketing site
 
-Static marketing website for [Grammafold](https://github.com/geneparcellano/grammafold), a macOS app that organizes photos and videos into date-based folders.
+Static marketing website for Grámmafold, a macOS app that organizes photos and videos into date-based folders.
 
 ## Pages
 
