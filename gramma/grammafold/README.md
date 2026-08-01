@@ -14,7 +14,7 @@ Static marketing website for Grámmafold, a macOS app that organizes photos and 
 
 This site is plain HTML, CSS, and JavaScript with no build step. Deploy the `gramma/grammafold/` directory to any static host.
 
-**GitHub Pages:** Serve from the repository root. The site URL is:
+Live URL:
 
 ```
 https://geneparcellano.com/gramma/grammafold/
