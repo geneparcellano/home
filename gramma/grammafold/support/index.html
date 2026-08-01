@@ -49,34 +49,28 @@
   <main id="main">
     <header class="page-header">
       <h1 class="page-header__title">Support</h1>
-      <p class="page-header__subtitle">Help for Grámmafold on macOS 14.0+</p>
+      <p class="page-header__subtitle">Questions? We&rsquo;re here to help.</p>
     </header>
 
     <div class="page-content">
       <section aria-labelledby="contact-title">
         <h2 id="contact-title">Contact</h2>
         <div class="contact-card">
-          <p>Questions, feedback, or need help?</p>
+          <p>Questions, feedback, or bug reports?</p>
           <p><a href="mailto:grammaworks@icloud.com">grammaworks@icloud.com</a></p>
         </div>
-        <p>For bug reports, contact the developer at <a href="mailto:grammaworks@icloud.com">grammaworks@icloud.com</a>.</p>
       </section>
 
       <section aria-labelledby="getting-started-title">
         <h2 id="getting-started-title">Getting started</h2>
         <ol>
-          <li><strong>Open Grámmafold</strong> and drop a folder onto the window, or choose <em>Choose Folder&hellip;</em> (<kbd>⌘O</kbd>).</li>
-          <li><strong>Wait for the scan.</strong> Grámmafold recursively searches your folder (no depth limit) and reads EXIF and video metadata from supported files.</li>
-          <li><strong>Review the preview.</strong> See exactly where each file will move, including any fallback dates or name collisions.</li>
-          <li><strong>Organize.</strong> Confirm to move files into date subfolders inside your selected folder. Default format is <code>MM-DD-YYYY</code>; you can change the format in settings.</li>
-          <li><strong>Undo if needed.</strong> Use undo to restore your previous folder layout.</li>
+          <li><strong>Drop a folder</strong> into Grámmafold, or click Choose Folder.</li>
+          <li><strong>Wait for the scan</strong> to finish.</li>
+          <li><strong>Review the preview</strong> to see where each file will go.</li>
+          <li><strong>Organize</strong> when you&rsquo;re ready.</li>
+          <li><strong>Undo</strong> if you want to put everything back.</li>
         </ol>
-        <p>Your files remain on your Mac throughout. Grámmafold does not upload anything.</p>
-      </section>
-
-      <section aria-labelledby="app-store-title">
-        <h2 id="app-store-title">Mac App Store</h2>
-        <p>Grámmafold is distributed through the Mac App Store. Updates are delivered automatically via the App Store when available.</p>
+        <p>Your files stay on your Mac. Grámmafold never uploads anything.</p>
       </section>
 
       <section aria-labelledby="faq-title">
@@ -86,23 +80,11 @@
           <li>
             <details class="faq-item">
               <summary class="faq-question">
-                How do I organize my photos?
-                <svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M10 4v12M4 10h12"/></svg>
-              </summary>
-              <div class="faq-answer">
-                <p>Drop a folder into Grámmafold or use Choose Folder&hellip; (<kbd>⌘O</kbd>). After the scan completes, review the preview showing where each file will go, then confirm to organize. Files move into date subfolders within the folder you selected.</p>
-              </div>
-            </details>
-          </li>
-
-          <li>
-            <details class="faq-item">
-              <summary class="faq-question">
                 Does Grámmafold upload my photos?
                 <svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M10 4v12M4 10h12"/></svg>
               </summary>
               <div class="faq-answer">
-                <p>No. Grámmafold works entirely on your Mac. Your photos, videos, filenames, and metadata never leave your computer. There are no cloud uploads, no servers, and no network transmission of your files.</p>
+                <p>No. Everything stays on your Mac. Your photos and videos never leave your computer.</p>
               </div>
             </details>
           </li>
@@ -110,11 +92,11 @@
           <li>
             <details class="faq-item">
               <summary class="faq-question">
-                Does Grámmafold modify my photos?
+                Does Grámmafold change my photos?
                 <svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M10 4v12M4 10h12"/></svg>
               </summary>
               <div class="faq-answer">
-                <p>No. Grámmafold only moves files into organized folders. It does not edit, compress, convert, or alter the contents of your photos or videos.</p>
+                <p>No. Grámmafold only moves files into folders. It does not edit or alter your photos and videos.</p>
               </div>
             </details>
           </li>
@@ -122,11 +104,11 @@
           <li>
             <details class="faq-item">
               <summary class="faq-question">
-                What are fallback dates?
+                What if a photo has no date?
                 <svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M10 4v12M4 10h12"/></svg>
               </summary>
               <div class="faq-answer">
-                <p>Grámmafold reads dates from EXIF and video metadata first. When metadata is missing or unreadable, it falls back to the file&rsquo;s creation or modification date on disk. Files using fallback dates are clearly labeled in the preview so you can review them before organizing.</p>
+                <p>Grámmafold uses the date embedded in the photo or video when available. If none is found, it uses the file&rsquo;s date on your Mac. These are clearly marked in the preview so you can review them first.</p>
               </div>
             </details>
           </li>
@@ -134,36 +116,11 @@
           <li>
             <details class="faq-item">
               <summary class="faq-question">
-                What happens if files have the same name?
+                What if two files have the same name?
                 <svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M10 4v12M4 10h12"/></svg>
               </summary>
               <div class="faq-answer">
-                <p>Grámmafold uses safe collision handling. If a file with the same name already exists in the destination folder, it appends a unique suffix instead of overwriting. All collision resolutions appear in the preview before you confirm.</p>
-              </div>
-            </details>
-          </li>
-
-          <li>
-            <details class="faq-item">
-              <summary class="faq-question">
-                What file formats are supported?
-                <svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M10 4v12M4 10h12"/></svg>
-              </summary>
-              <div class="faq-answer">
-                <p><strong>Photos:</strong> .jpg, .jpeg, .heic, .heif, .tif, .tiff, .png, .raf, .dng, .cr2, .nef, .arw<br>
-                <strong>Videos:</strong> .mov, .mp4, .m4v, .avi, .mkv</p>
-              </div>
-            </details>
-          </li>
-
-          <li>
-            <details class="faq-item">
-              <summary class="faq-question">
-                Why are some files marked unsupported?
-                <svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M10 4v12M4 10h12"/></svg>
-              </summary>
-              <div class="faq-answer">
-                <p>Files with extensions outside the supported format list, or files whose metadata cannot be read, are marked unsupported in the preview. They are not moved during organization. Non-media files in your folder are ignored.</p>
+                <p>Grámmafold never overwrites files. If a name already exists, it adds a number to make the name unique. You&rsquo;ll see this in the preview before organizing.</p>
               </div>
             </details>
           </li>
@@ -175,7 +132,7 @@
                 <svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M10 4v12M4 10h12"/></svg>
               </summary>
               <div class="faq-answer">
-                <p>Yes. After organizing, use the undo action to restore files to their original locations and folder layout.</p>
+                <p>Yes. Undo puts all files back where they were.</p>
               </div>
             </details>
           </li>
@@ -183,11 +140,11 @@
           <li>
             <details class="faq-item">
               <summary class="faq-question">
-                What does &ldquo;Remove empty folders&rdquo; do?
+                What file types are supported?
                 <svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M10 4v12M4 10h12"/></svg>
               </summary>
               <div class="faq-answer">
-                <p>When enabled in settings, Grámmafold removes folders that become empty after organizing. This option is off by default. The preference is stored locally in UserDefaults on your Mac.</p>
+                <p>Common photo and video formats including JPEG, HEIC, PNG, TIFF, RAW files from major cameras, MOV, MP4, and more. See the <a href="../#formats">full list</a> on the home page.</p>
               </div>
             </details>
           </li>
@@ -195,23 +152,11 @@
           <li>
             <details class="faq-item">
               <summary class="faq-question">
-                What macOS version is required?
+                What Mac do I need?
                 <svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M10 4v12M4 10h12"/></svg>
               </summary>
               <div class="faq-answer">
-                <p>Grámmafold requires macOS 14.0 or later.</p>
-              </div>
-            </details>
-          </li>
-
-          <li>
-            <details class="faq-item">
-              <summary class="faq-question">
-                How does folder access work?
-                <svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M10 4v12M4 10h12"/></svg>
-              </summary>
-              <div class="faq-answer">
-                <p>Grámmafold runs in the macOS sandbox. It can only access folders you explicitly select through the folder picker (<kbd>⌘O</kbd>) or by dragging a folder into the app. It cannot browse your Mac without your permission.</p>
+                <p>Grámmafold requires macOS 14 or later.</p>
               </div>
             </details>
           </li>
