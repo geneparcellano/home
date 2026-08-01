@@ -200,13 +200,13 @@ summary:focus-visible {
   padding: 0;
 }
 
-.site-nav a {
+.site-nav a:not(.btn) {
   color: var(--color-text-secondary);
   font-size: 14px;
   text-decoration: none;
 }
 
-.site-nav a:hover {
+.site-nav a:not(.btn):hover {
   color: var(--color-text);
   text-decoration: none;
 }
@@ -246,6 +246,19 @@ summary:focus-visible {
 .btn--primary:hover {
   background: var(--color-accent-hover);
   color: #fff;
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  .btn--primary {
+    background: var(--brand-fold);
+    color: #1c1c1e;
+  }
+
+  .btn--primary:hover {
+    background: var(--brand-fold-hover);
+    color: #1c1c1e;
+  }
 }
 
 .btn--secondary {
