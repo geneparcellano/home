@@ -80,4 +80,78 @@
       }
     });
   });
+
+  var screenshots = document.querySelectorAll('.screenshot');
+  if (screenshots.length > 0) {
+    var modal = document.createElement('div');
+    modal.className = 'screenshot-modal';
+    modal.setAttribute('hidden', '');
+    modal.setAttribute('role', 'dialog');
+    modal.setAttribute('aria-modal', 'true');
+    modal.innerHTML =
+      '<div class="screenshot-modal__backdrop"></div>' +
+      '<button type="button" class="screenshot-modal__close" aria-label="Close">' +
+        '<svg class="screenshot-modal__close-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">' +
+          '<path d="M5 5l10 10M15 5L5 15"/>' +
+        '</svg>' +
+      '</button>' +
+      '<div class="screenshot-modal__content">' +
+        '<img class="screenshot-modal__image" src="" alt="">' +
+      '</div>';
+    document.body.appendChild(modal);
+
+    var backdrop = modal.querySelector('.screenshot-modal__backdrop');
+    var closeBtn = modal.querySelector('.screenshot-modal__close');
+    var modalImage = modal.querySelector('.screenshot-modal__image');
+    var lastTrigger = null;
+
+    function closeScreenshotModal() {
+      modal.setAttribute('hidden', '');
+      document.body.classList.remove('screenshot-modal-open');
+      modalImage.removeAttribute('src');
+      if (lastTrigger) {
+        lastTrigger.focus();
+        lastTrigger = null;
+      }
+    }
+
+    function openScreenshotModal(image) {
+      lastTrigger = image;
+      modalImage.src = image.currentSrc || image.src;
+      modalImage.alt = image.alt;
+      modal.setAttribute('aria-label', image.alt || 'Screenshot preview');
+      modal.removeAttribute('hidden');
+      document.body.classList.add('screenshot-modal-open');
+      closeBtn.focus();
+    }
+
+    screenshots.forEach(function (image) {
+      image.tabIndex = 0;
+      image.setAttribute('role', 'button');
+      image.setAttribute(
+        'aria-label',
+        image.alt ? 'View larger: ' + image.alt : 'View larger screenshot'
+      );
+
+      image.addEventListener('click', function () {
+        openScreenshotModal(image);
+      });
+
+      image.addEventListener('keydown', function (event) {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          openScreenshotModal(image);
+        }
+      });
+    });
+
+    closeBtn.addEventListener('click', closeScreenshotModal);
+    backdrop.addEventListener('click', closeScreenshotModal);
+
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape' && !modal.hasAttribute('hidden')) {
+        closeScreenshotModal();
+      }
+    });
+  }
 })();
