@@ -694,6 +694,7 @@ summary:focus-visible {
 }
 
 .screenshot--plain,
+.screenshot--transparent,
 .hero__screenshot {
   border: none;
   box-shadow: none;
