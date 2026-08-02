@@ -3,6 +3,10 @@
 
   var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  document.querySelectorAll('.copyright-year').forEach(function (yearEl) {
+    yearEl.textContent = new Date().getFullYear();
+  });
+
   document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
     anchor.addEventListener('click', function (event) {
       var targetId = this.getAttribute('href');
