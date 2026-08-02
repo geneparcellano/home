@@ -100,7 +100,6 @@
       '</div>';
     document.body.appendChild(modal);
 
-    var backdrop = modal.querySelector('.screenshot-modal__backdrop');
     var closeBtn = modal.querySelector('.screenshot-modal__close');
     var modalImage = modal.querySelector('.screenshot-modal__image');
     var lastTrigger = null;
@@ -146,7 +145,7 @@
     });
 
     closeBtn.addEventListener('click', closeScreenshotModal);
-    backdrop.addEventListener('click', closeScreenshotModal);
+    modal.addEventListener('click', closeScreenshotModal);
 
     document.addEventListener('keydown', function (event) {
       if (event.key === 'Escape' && !modal.hasAttribute('hidden')) {
