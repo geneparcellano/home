@@ -3,21 +3,24 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Grámmafold — Organize photos and videos into date-based folders</title>
-  <meta name="description" content="Organize photos and videos into date folders on your Mac. Preview before moving anything. No uploads, no account.">
+  <title>Grámmafold — Organize Photos into Date Folders on Mac</title>
+  <meta name="description" content="Grámmafold is a Mac app that organizes photos and videos into folders by date. Sort your library chronologically, preview every move, and undo anytime. Private — files stay on your Mac.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://geneparcellano.com/gramma/grammafold/">
 
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Grámmafold — Organize photos and videos into date-based folders">
-  <meta property="og:description" content="Drop a folder. Preview every move. Organize photos and videos into date folders — privately, on your Mac.">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="Grámmafold — Organize Photos into Date Folders on Mac">
+  <meta property="og:description" content="Sort photos and videos into chronological date folders on your Mac. Preview before moving anything. No uploads, no account.">
   <meta property="og:url" content="https://geneparcellano.com/gramma/grammafold/">
   <meta property="og:site_name" content="Grámmafold">
   <meta property="og:image" content="https://geneparcellano.com/gramma/grammafold/assets/icon.png">
+  <meta property="og:image:alt" content="Grámmafold app icon — organize photos into folders by date on Mac">
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Grámmafold — Organize photos and videos into date-based folders">
-  <meta name="twitter:description" content="Your photos stay on your Mac. Preview before organizing. Undo anytime.">
+  <meta name="twitter:title" content="Grámmafold — Organize Photos into Date Folders on Mac">
+  <meta name="twitter:description" content="A Mac app that organizes photos and videos into date folders chronologically. Preview before moving. Undo anytime.">
+  <meta name="twitter:image" content="https://geneparcellano.com/gramma/grammafold/assets/icon.png">
 
   <meta name="apple-mobile-web-app-title" content="Grámmafold">
   <meta name="theme-color" content="#6B4FA0">
@@ -30,14 +33,49 @@
   <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/styles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://geneparcellano.com/gramma/grammafold/#website",
+        "url": "https://geneparcellano.com/gramma/grammafold/",
+        "name": "Grámmafold",
+        "description": "Organize photos and videos into folders by date on Mac."
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://geneparcellano.com/gramma/grammafold/#app",
+        "name": "Grámmafold",
+        "url": "https://geneparcellano.com/gramma/grammafold/",
+        "applicationCategory": "PhotographyApplication",
+        "operatingSystem": "macOS 14 or later",
+        "description": "A Mac app that organizes photos and videos into date-based folders chronologically. Preview every move before files are sorted, undo anytime, and keep everything on your Mac.",
+        "image": "https://geneparcellano.com/gramma/grammafold/assets/icon.png",
+        "screenshot": "https://geneparcellano.com/gramma/grammafold/assets/screenshots/finder-after.png",
+        "downloadUrl": "https://apps.apple.com/us/app/grammafold/id6793012279?mt=12",
+        "offers": {
+          "@type": "Offer",
+          "url": "https://apps.apple.com/us/app/grammafold/id6793012279?mt=12"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Gene Parcellano"
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
 
   <header class="site-header" role="banner">
     <div class="site-header__inner">
-      <a class="site-logo" href="index.html" aria-label="grammafold home">
-        <img class="site-logo__icon" src="assets/icon.png" width="28" height="28" alt="">
+      <a class="site-logo" href="./" aria-label="Grámmafold home">
+        <img class="site-logo__icon" src="assets/icon.png" width="28" height="28" alt="Grámmafold">
         <span class="wordmark wordmark--sm" aria-hidden="true"><span class="wordmark__gramma">grámma</span><span class="wordmark__fold">fold</span></span>
       </a>
       <nav class="header-nav" aria-label="Primary">
@@ -60,14 +98,14 @@
   </header>
 
   <main id="main">
-    <section class="hero" aria-labelledby="hero-wordmark">
+    <section class="hero" aria-labelledby="hero-heading">
       <img class="hero__icon" src="assets/icon.png" width="128" height="128" alt="Grámmafold app icon">
 
-      <h1 id="hero-wordmark" class="hero__wordmark wordmark" aria-label="grammafold">
-        <span class="wordmark__gramma" aria-hidden="true">grámma</span><span class="wordmark__fold" aria-hidden="true">fold</span>
-      </h1>
+      <p class="hero__wordmark wordmark" aria-hidden="true">
+        <span class="wordmark__gramma">grámma</span><span class="wordmark__fold">fold</span>
+      </p>
 
-      <p class="hero__tagline">Organize photos and videos into folders by date.</p>
+      <h1 id="hero-heading" class="hero__value">Organize photos and videos into chronological folders by date.</h1>
 
       <p class="hero__subhead">Drop a folder, preview the plan, and organize — all on your Mac. No uploads. No account.</p>
 
@@ -81,8 +119,8 @@
 
     <section id="results" class="section section--alt" aria-labelledby="results-title">
       <div class="section__inner">
-        <h2 id="results-title" class="section__title">From messy folder to organized photos</h2>
-        <p class="section__lead">See the difference in Finder.</p>
+        <h2 id="results-title" class="section__title">From messy folder to photos organized by date</h2>
+        <p class="section__lead">See the difference when your library is sorted chronologically in Finder.</p>
 
         <div class="before-after">
           <article class="panel panel--lg" aria-labelledby="before-label">
@@ -107,7 +145,7 @@
     <section id="how-it-works" class="section" aria-labelledby="how-title">
       <div class="section__inner">
         <h2 id="how-title" class="section__title">How it works</h2>
-        <p class="section__lead">Four simple steps. You always preview before anything moves.</p>
+        <p class="section__lead">Four simple steps to sort photos and videos into date folders. You always preview before anything moves.</p>
 
         <div class="workflow-split">
           <div class="workflow-row">
@@ -152,7 +190,7 @@
     <section class="section text-center" aria-labelledby="cta-title">
       <div class="section__inner">
         <h2 id="cta-title" class="section__title">Your photos stay on your Mac.</h2>
-        <p class="section__lead">Download Grámmafold from the Mac App Store.</p>
+        <p class="section__lead">Download Grámmafold and organize photos into date folders in minutes.</p>
         <a class="btn btn--primary" href="https://apps.apple.com/us/app/grammafold/id6793012279?mt=12" rel="noopener noreferrer" target="_blank">Download on the Mac App Store</a>
       </div>
     </section>
