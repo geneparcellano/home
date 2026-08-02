@@ -177,6 +177,7 @@ summary:focus-visible {
   display: flex;
   align-items: center;
   gap: 10px;
+  min-width: 0;
   text-decoration: none;
 }
 
@@ -191,7 +192,15 @@ summary:focus-visible {
   flex-shrink: 0;
 }
 
-.site-nav {
+.header-nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-shrink: 0;
+}
+
+.header-nav__links {
   display: flex;
   align-items: center;
   gap: 24px;
@@ -200,14 +209,71 @@ summary:focus-visible {
   padding: 0;
 }
 
-.site-nav a:not(.btn) {
+.header-nav__links a {
   color: var(--color-text-secondary);
   font-size: 14px;
   text-decoration: none;
 }
 
-.site-nav a:not(.btn):hover {
+.header-nav__links a:hover {
   color: var(--color-text);
+  text-decoration: none;
+}
+
+.header-nav__actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--button-radius);
+  background: var(--color-bg-elevated);
+  color: var(--color-text);
+  cursor: pointer;
+}
+
+.nav-toggle__icon {
+  width: 18px;
+  height: 18px;
+}
+
+.mobile-nav-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  z-index: 10;
+  min-width: 160px;
+  list-style: none;
+  margin: 0;
+  padding: 8px 0;
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: var(--panel-radius);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.mobile-nav-menu[hidden] {
+  display: none;
+}
+
+.mobile-nav-menu a {
+  display: block;
+  padding: 10px 16px;
+  color: var(--color-text);
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.mobile-nav-menu a:hover {
+  background: var(--color-panel-bg);
   text-decoration: none;
 }
 
@@ -1025,8 +1091,12 @@ kbd {
 /* Responsive header */
 
 @media (max-width: 734px) {
-  .site-nav li:not(:last-child):not(:nth-last-child(2)) {
+  .header-nav__links {
     display: none;
+  }
+
+  .nav-toggle {
+    display: inline-flex;
   }
 
   .hero {
